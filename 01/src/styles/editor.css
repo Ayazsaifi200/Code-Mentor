@@ -1,0 +1,276 @@
+/* Add these to the top of your editor.css file */
+
+/* GUARANTEED CURSOR FIX */
+.pure-editor-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pure-editor {
+  height: calc(100% - 50px);
+  width: 100%;
+}
+
+/* Toolbar styling */
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 15px;
+  background: #f7f9fc;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.toolbar-left, .toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Language selector */
+.language-selector {
+  height: 32px;
+  padding: 0 12px;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.language-selector:hover {
+  border-color: #b0b0b0;
+}
+
+.language-selector:focus {
+  border-color: #4a89dc;
+  box-shadow: 0 0 0 2px rgba(74, 137, 220, 0.2);
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.theme-toggle-btn.dark {
+  color: #f8d36f; /* Sun icon color */
+}
+
+.theme-toggle-btn.light {
+  color: #5c6bc0; /* Moon icon color */
+}
+
+/* Run button */
+.run-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.run-btn:hover {
+  background-color: #45a049;
+}
+
+.run-btn i {
+  font-size: 12px;
+}
+
+/* CodeMirror styles */
+.cm-editor {
+  height: 100% !important;
+}
+
+.cm-scroller {
+  overflow: auto !important;
+  height: 100% !important;
+}
+
+/* These are the critical cursor styles */
+.cm-cursor {
+  border-left: 2px solid black !important;
+  border-right: none !important;
+  margin-left: 0 !important;
+  position: absolute !important; 
+  z-index: 100 !important;
+  visibility: visible !important;
+}
+
+/* Ensure text direction is correct */
+.cm-content {
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-size: 14px !important;
+  white-space: pre !important;
+  padding: 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* Selection styling */
+.cm-selectionBackground {
+  background: rgba(74, 137, 220, 0.3) !important;
+}
+
+/* Active line highlight */
+.cm-activeLine {
+  background: rgba(242, 244, 248, 0.6) !important;
+}
+
+/* Gutter styling */
+.cm-gutters {
+  border-right: 1px solid #eaeaea !important;
+  background-color: #f7f9fc !important;
+  padding-right: 2px !important;
+}
+
+.cm-lineNumbers {
+  color: #888 !important;
+}
+
+/* Remove outline on focused editor */
+.cm-focused {
+  outline: none !important;
+}
+
+/* Dark theme overrides */
+.dark-theme .editor-toolbar {
+  background: #282c34;
+  border-bottom: 1px solid #3e4451;
+}
+
+.dark-theme .language-selector {
+  background-color: #333842;
+  border-color: #464c59;
+  color: #abb2bf;
+}
+
+.dark-theme .theme-toggle-btn {
+  border-color: #464c59;
+  color: #f8d36f;
+  background: #333842;
+}
+
+.dark-theme .theme-toggle-btn:hover {
+  background: #3e4451;
+}
+
+.dark-theme .run-btn {
+  background-color: #61afef;
+}
+
+.dark-theme .run-btn:hover {
+  background-color: #56a0db;
+}
+
+.dark-theme .cm-cursor {
+  border-left: 2px solid #abb2bf !important;
+}
+
+.dark-theme .cm-content {
+  color: #abb2bf !important;
+  background-color: #282c34 !important;
+}
+
+.dark-theme .cm-gutters {
+  background-color: #282c34 !important;
+  border-right-color: #3e4451 !important;
+}
+
+.dark-theme .cm-lineNumbers {
+  color: #636d83 !important;
+}
+
+.dark-theme .cm-activeLine {
+  background: rgba(40, 44, 52, 0.6) !important;
+}
+
+/* Add or update these styles for better output display */
+.run-result {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #28a745;
+}
+
+.dark-theme .run-result {
+  background-color: #282c34;
+  border-left: 4px solid #61afef;
+}
+
+.run-result h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.dark-theme .run-result h4 {
+  color: #abb2bf;
+}
+
+.run-result pre {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #272822;
+  color: #f8f8f2;
+  border-radius: 3px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.dark-theme .run-result pre {
+  background-color: #21252b;
+  color: #abb2bf;
+}
+
+.run-result.running {
+  border-left-color: #007bff;
+}
+
+.execution-time {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.result-spacer {
+  height: 30px;
+}

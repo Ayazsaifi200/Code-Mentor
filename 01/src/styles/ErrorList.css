@@ -1,0 +1,161 @@
+.error-container {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.error-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.error-summary h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.error-counts {
+  display: flex;
+  gap: 15px;
+}
+
+.error-counts span {
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.error-count {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.warning-count {
+  background: #fff8e1;
+  color: #ff8f00;
+}
+
+.suggestion-count {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.info-count {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.error-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.error-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.error-item:last-child {
+  border-bottom: none;
+}
+
+.error-type-error {
+  border-left: 4px solid #d32f2f;
+}
+
+.error-type-warning {
+  border-left: 4px solid #ff8f00;
+}
+
+.error-type-suggestion {
+  border-left: 4px solid #388e3c;
+}
+
+.error-type-info {
+  border-left: 4px solid #1976d2;
+}
+
+.error-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.error-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.error-type-error .error-badge {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.error-type-warning .error-badge {
+  background: #fff8e1;
+  color: #ff8f00;
+}
+
+.error-type-suggestion .error-badge {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.error-type-info .error-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.error-line {
+  font-family: monospace;
+  color: #666;
+}
+
+.error-message {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.error-code {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  overflow-x: auto;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
+
+.fix-error-btn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.fix-error-btn:hover {
+  background: #3367d6;
+}
+
+.no-errors {
+  padding: 20px;
+  text-align: center;
+  color: #388e3c;
+  background: #e8f5e9;
+  border-radius: 6px;
+  margin-top: 20px;
+}
